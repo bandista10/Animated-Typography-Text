@@ -1,0 +1,97 @@
+html, body{
+    height: 100%;
+}
+body{
+    margin: 0;
+    background: #13dee6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-content: center;
+}
+h1{
+    font-size: 4em;
+    text-shadow: 5px 5px #e6ac30, 8px 8px rgba(0,0,0,.19);
+    margin: 0;
+    animation: slide-tr 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+h3{
+    font-size: 1.5rem;
+    margin: 0 25px;
+    color: rgb(26, 24, 24);
+    text-shadow: 3px 3px rgb(233, 130, 35), 6px 6px rgba(0,0,0,.1);
+}
+h3:before, h3:after{
+    content: " ";
+    position: absolute;
+    /*
+    border-top: 2px solid rgba(0,0,0,.3);
+    */
+    border-top: 2px solid rgba(235, 47, 47, 0.685);
+}
+h3:nth-of-type(1):before{
+    width: 3%;
+    height: 4px;
+    margin: 3% 0 0 -4%;
+}
+h3:nth-of-type(1):after{
+    width: 53%;  
+    height: 4px;
+    margin: 3% 0 0 2%;
+}
+h3:nth-of-type(2){
+        float: right;
+        margin-top: -8%;
+}
+h3:nth-of-type(2):before{
+    width: 225%;
+    height: 4px;
+    margin: 7% 0 0 -230%;
+}
+h3:nth-of-type(2):after{
+    width: 10%;  
+    height: 4px;
+    margin: 7% 0 0 2%;
+}
+h1, h3{
+    transform:matrix(1.00,-0.30,0.00,1.00,0,0);
+    -ms-transform:matrix(1.00,-0.30,0.00,1.00,0,0);
+    -webkit-transform:matrix(1.00,-0.30,0.00,1.00,0,0);
+    text-transform: uppercase;
+    
+}
+#container:before{
+    content: " ";
+    overflow: hidden;
+    -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    background: rgba(0,0,0,.07);
+    position: fixed;
+    height: 900px;
+    width: 900px;
+    margin: auto;
+    top: 0; right: 0; bottom: 0; left: 0;
+    animation: scale-up-hor-center 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+   
+    
+}
+
+ @keyframes scale-up-hor-center {
+    0% {
+      transform: scaleX(0.4) matrix(1.00,-0.30,0.00,1.00,0,0);
+    }
+    100% {
+      transform: scaleX(1) matrix(1.00,-0.30,0.00,1.00,0,0);
+    }
+  }
+
+@keyframes slide-tr {
+    0% {
+      transform: translateY(30px) translateX(-100px) matrix(1.00,-0.30,0.00,1.00,0,0);
+    }
+    100% {
+      transform: translateY(0) translateX(0) matrix(1.00,-0.30,0.00,1.00,0,0);
+    }
+  }
+  
